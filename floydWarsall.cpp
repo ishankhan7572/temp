@@ -38,7 +38,7 @@ void dikForWighUndirec(){lli n,m;cin>>n>>m;vector<pii> adj[n+1];vector<bool> vis
 // (x^y)%p  
 int powerundermodp(int x, ll y, ll  p){int res = 1;x = x % p;if (x == 0) return 0; while (y > 0){if (y & 1)res = (res*x) % p;y = y>>1;x = (x*x) % p;}return res;}
 
-void solve()
+void floydWarsall()
 {
 	int n,m,q;
 	int a,b,c;
@@ -107,7 +107,7 @@ int  t=1;
  
 while(t--)
 {
-    solve();
+    floydWarsall();
     cout<<"\n";    
 }
  
