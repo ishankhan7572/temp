@@ -66,7 +66,7 @@ void dfs(int node, int parent, vector<int> &vis, vector<int> &tin, vector<int> &
     }
 }
 
-void  solve()
+void  NumberOfArticualtionPoint()
 {
 	int n, m;
     cin >> n >> m; 
@@ -118,7 +118,7 @@ int  t=1;
  
 while(t--)
 {
-    solve()
+    NumberOfArticualtionPoint();
     cout<<"\n";    
 }
  
