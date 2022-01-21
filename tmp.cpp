@@ -1,31 +1,36 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
 
-typedef long long int lli;
-typedef long long ll;
-typedef vector< int > vi;
-typedef vector< vi > vvi;
-typedef pair< int,int > ii;
-#define rep(i, n) for(int i = 0; i < n; i++)
-#define rrep(i,n) for(int i = n-1; i >= 0; i--)
-ll ceil_div(ll a,ll b){  return (a%b==0)? a/b :a/b+1 ;}
+// Header files, namespaces,
+// macros as defined above
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+
+#define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update>
+
+// Driver program to test above functions
 int main()
 {
-    
-ios_base::sync_with_stdio(false); 
-cin.tie(NULL);
-ll  t,n;
-cin>>t;
-while(t--)
-{
-    
-    
-    
+    // Ordered set declared with name o_set
+    ordered_set s;
+
+    int n,k;
+    cin>>n>>k;
+
+    for (int i = 1; i <=n; ++i)
+    s.insert(i);
+
+        int ind=0,t=n;
+
+        while(t)
+        {
+            ind=(ind+k)%t;
+            int ele=*(s.find_by_order(ind));
+            cout<<ele<<" ";
+            s.erase(s.find(ele));
+            t--;
+        }
+
 }
-}
-
-
-
-
-
-
