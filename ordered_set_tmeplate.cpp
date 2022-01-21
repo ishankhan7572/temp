@@ -1,4 +1,6 @@
 
+//  Solution of Josephus problemm 2 cses
+
 #include <iostream>
 using namespace std;
 
